@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
-// GET Route for homepage
+// GET route for homepage
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
@@ -25,7 +25,7 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
-// GET request for retrieving notes
+// GET request for retrieving preciously stored notes
 app.get('/api/notes', (req, res) => {
     res.json(storedNotes);
 });
@@ -33,15 +33,9 @@ app.get('/api/notes', (req, res) => {
 // POST request to add note
 app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a new note.`);
-    // access note data
-    // const newNote = req.body;
-    // create (persist data)
-    // const storedNotes = 
-    // access new note data from req
-    // push to existing list of notes
-    // rewrite db.json with old nad new note
+
     const {title, text} = req.body
-    if (title, text) {
+    if (title && text) {
         const newNote = {
             title,
             text,
@@ -72,16 +66,14 @@ app.post('/api/notes', (req, res) => {
     }
 });
 
+////////////
+// TODO: code to GET old note when clicked
+
 
 ////////////
-
-// const path = require('path');
 // const api = require('./public/assets/index');
-
-
-
-
 // app.use('/api', api);
+// TODO: HEROKU
 
 
 
