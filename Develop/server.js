@@ -43,10 +43,9 @@ app.post('/api/notes', (req, res) => {
 
         storedNotes.push(newNote);
 
-        // var allNotes = 
-        JSON.stringify(storedNotes, null, 2);
+        var allNotes = JSON.stringify(storedNotes, null, 2);
 
-        fs.writeFile(`./db/db.json`, storedNotes, (err) =>
+        fs.writeFile(`./db/db.json`, allNotes, (err) =>
         err
           ? console.error(err)
           : console.log(
