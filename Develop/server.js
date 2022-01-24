@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
-const storedNotes = require('./db/db.json');
+var storedNotes = require('./db/db.json');
 
 const app = express();
 
@@ -75,6 +75,7 @@ app.delete('/api/notes/:id', (req, res) => {
     
     const id = req.params.id;
     var updatedNotes = storedNotes.filter(item => item.id !== id);
+    storedNotes = updatedNotes;
     
     if (id) {
         fs.writeFile(`./db/db.json`, JSON.stringify(updatedNotes, null, 2), (err) =>
@@ -87,7 +88,7 @@ app.delete('/api/notes/:id', (req, res) => {
   
       const response = {
         status: 'success',
-        body: id
+        id: id
       };
   
       console.log(response);

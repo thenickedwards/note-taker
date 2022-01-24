@@ -3,40 +3,5 @@
     "title": "Sample Note",
     "text": "Welcome to your brand new Note Taker!\nTo add a note click the + in the upper right.\nOnce you've filled the title and text fields, click the Save button to store your note for later.\nYou can delete a note by clicking its trash can button. Be careful: once you delete a note it's gone forever!",
     "id": "123"
-  },
-  {
-    "title": "Hey There",
-    "text": "Testing new id!",
-    "id": "87d85faa-897f-4926-bb6b-d81961871fb9"
-  },
-  {
-    "title": "Let's test again!",
-    "text": "Another test, can this be deleted?\nWell?\nCAN IT?!?",
-    "id": "e644888c-bf51-4290-a2c0-83ab2891dc3a"
-  },
-  {
-    "title": "fjord",
-    "text": "fjord",
-    "id": "bfd81481-800e-4d99-81e2-34d458ce4304"
-  },
-  {
-    "title": "DDDD",
-    "text": "dd",
-    "id": "41dfb601-d2b9-4183-aa5b-73629570ee0c"
-  },
-  {
-    "title": "Asdf",
-    "text": "asdf",
-    "id": "4d6706d4-b61f-424f-b68a-1bcebbbf0fb0"
-  },
-  {
-    "title": "LLLLLLL",
-    "text": "LLLL",
-    "id": "cf6e8688-dd89-488d-96f8-3d24cfb5a128"
-  },
-  {
-    "title": "test 3",
-    "text": "testing 3",
-    "id": "150b3ae6-5cc7-4cd3-b230-cbfa7bdefa62"
   }
 ]
