@@ -65,10 +65,6 @@ app.post('/api/notes', (req, res) => {
     }
 });
 
-////////////
-// TODO: code to GET old note when clicked
-// app.delete('/:id', (req, res) => res.json(`DELETE route`));
-
 // DELETE request to delete note
 app.delete('/api/notes/:id', (req, res) => {
     console.info(`${req.method} request received to delete a note.`);
