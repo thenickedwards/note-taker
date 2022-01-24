@@ -43,9 +43,10 @@ app.post('/api/notes', (req, res) => {
 
         storedNotes.push(newNote);
 
-        const allNotes = JSON.stringify(storedNotes, null, 2);
+        // var allNotes = 
+        JSON.stringify(storedNotes, null, 2);
 
-        fs.writeFile(`./db/db.json`, allNotes, (err) =>
+        fs.writeFile(`./db/db.json`, storedNotes, (err) =>
         err
           ? console.error(err)
           : console.log(
@@ -87,7 +88,7 @@ app.delete('/api/notes/:id', (req, res) => {
   
       const response = {
         status: 'success',
-        // body: newNote,
+        body: id
       };
   
       console.log(response);
