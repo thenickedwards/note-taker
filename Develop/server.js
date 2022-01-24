@@ -74,13 +74,10 @@ app.delete('/api/notes/:id', (req, res) => {
     console.info(`${req.method} request received to delete a note.`);
     
     const id = req.params.id;
-    const updatedNotes = storedNotes.filter(item => item.id !== id);
+    var updatedNotes = storedNotes.filter(item => item.id !== id);
     
     if (id) {
-
-        const updatedNotes = JSON.stringify(storedNotes, null, 2);
-
-        fs.writeFile(`./db/db.json`, updatedNotes, (err) =>
+        fs.writeFile(`./db/db.json`, JSON.stringify(updatedNotes, null, 2), (err) =>
         err
           ? console.error(err)
           : console.log(
@@ -96,9 +93,8 @@ app.delete('/api/notes/:id', (req, res) => {
       console.log(response);
       res.status(201).json(response);
     } else {
-      res.status(500).json('Error in posting note');
+        res.status(500).json('Error in deleting note');
     }
-
 });
 
 
