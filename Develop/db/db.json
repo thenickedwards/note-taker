@@ -1,26 +1,22 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text"
+    "title": "Sample Note",
+    "text": "Welcome to your brand new Note Taker!\nTo add a note click the + in the upper right.\nOnce you've filled the title and text fields, click the Save button to store your note for later.\nYou can delete a note by clicking its trash can button. Be careful: once you delete a note it's gone forever!",
+    "id": "123"
   },
   {
-    "title": "Go get em!",
-    "text": "Hello world.",
-    "note_id": "bdc7dfc1-8af4-47d5-9daa-c51920b691b5"
+    "title": "Hey There",
+    "text": "Testing new id!",
+    "id": "87d85faa-897f-4926-bb6b-d81961871fb9"
   },
   {
-    "title": "Testing 2",
-    "text": "Second test",
-    "note_id": "50676a85-e43d-46a9-860c-9c5978b3d560"
+    "title": "Let's test again!",
+    "text": "Another test, can this be deleted?\nWell?\nCAN IT?!?",
+    "id": "e644888c-bf51-4290-a2c0-83ab2891dc3a"
   },
   {
-    "title": "Testing 3",
-    "text": "Another one in the books",
-    "note_id": "b9b0c3d7-b477-44ec-89aa-2e3fad75934b"
-  },
-  {
-    "title": "Test 4",
-    "text": "Test-o numero four-o",
-    "note_id": "40fefd0a-3864-463d-a834-f0e64dc8335e"
+    "title": "Adding a fourth",
+    "text": "To the melange.",
+    "id": "12a66062-7d97-433c-aab6-29e3965fc9a4"
   }
 ]

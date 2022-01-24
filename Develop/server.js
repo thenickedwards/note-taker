@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
-// const api = require('')
 const storedNotes = require('./db/db.json');
 
 const app = express();
@@ -39,7 +38,7 @@ app.post('/api/notes', (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuidv4()
+            id: uuidv4()
         };
 
         storedNotes.push(newNote);
@@ -50,7 +49,7 @@ app.post('/api/notes', (req, res) => {
         err
           ? console.error(err)
           : console.log(
-              `Note titled ${newNote.title} has been written to JSON file`
+              `Note titled "${newNote.title}" has been written to JSON file`
             )
       );
   
@@ -68,6 +67,39 @@ app.post('/api/notes', (req, res) => {
 
 ////////////
 // TODO: code to GET old note when clicked
+// app.delete('/:id', (req, res) => res.json(`DELETE route`));
+
+// DELETE request to delete note
+app.delete('/api/notes/:id', (req, res) => {
+    console.info(`${req.method} request received to delete a note.`);
+    
+    const id = req.params.id;
+    const updatedNotes = storedNotes.filter(item => item.id !== id);
+    
+    if (id) {
+
+        const updatedNotes = JSON.stringify(storedNotes, null, 2);
+
+        fs.writeFile(`./db/db.json`, updatedNotes, (err) =>
+        err
+          ? console.error(err)
+          : console.log(
+              `Note with id ${id} has been deleted from JSON file`
+            )
+      );
+  
+      const response = {
+        status: 'success',
+        // body: newNote,
+      };
+  
+      console.log(response);
+      res.status(201).json(response);
+    } else {
+      res.status(500).json('Error in posting note');
+    }
+
+});
 
 
 ////////////
