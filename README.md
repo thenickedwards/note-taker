@@ -15,7 +15,7 @@ Note Taker server-side code written per acceptance criteria in [provided_assets/
 ## Links
 URL for GitHub repo: https://github.com/thenickedwards/note-taker
 
-URL for app deployed on Heroku: 
+URL for app deployed on Heroku: https://thenickedwards-note-taker.herokuapp.com/
 
 
 Thank you for reading the readme!
