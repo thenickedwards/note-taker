@@ -43,9 +43,7 @@ app.post('/api/notes', (req, res) => {
 
         storedNotes.push(newNote);
 
-        var allNotes = JSON.stringify(storedNotes, null, 2);
-
-        fs.writeFile(`./db/db.json`, allNotes, (err) =>
+        fs.writeFile(`./db/db.json`, JSON.stringify(storedNotes, null, 2), (err) =>
         err
           ? console.error(err)
           : console.log(
@@ -70,11 +68,12 @@ app.delete('/api/notes/:id', (req, res) => {
     console.info(`${req.method} request received to delete a note.`);
     
     const id = req.params.id;
-    var updatedNotes = storedNotes.filter(item => item.id !== id);
-    storedNotes = updatedNotes;
     
     if (id) {
-        fs.writeFile(`./db/db.json`, JSON.stringify(updatedNotes, null, 2), (err) =>
+
+        storedNotes = storedNotes.filter(item => item.id !== id);
+        
+        fs.writeFile(`./db/db.json`, JSON.stringify(storedNotes, null, 2), (err) =>
         err
           ? console.error(err)
           : console.log(
@@ -93,19 +92,6 @@ app.delete('/api/notes/:id', (req, res) => {
         res.status(500).json('Error in deleting note');
     }
 });
-
-
-////////////
-// const api = require('./public/assets/index');
-// app.use('/api', api);
-// TODO: HEROKU
-
-
-
-
-
-
-
 
 // Port listener
 app.listen(PORT, () =>
