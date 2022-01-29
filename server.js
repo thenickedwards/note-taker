@@ -92,6 +92,11 @@ app.delete('/api/notes/:id', (req, res) => {
     }
 });
 
+// GET route for homepage if not any of above 
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
+
 // Port listener
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
