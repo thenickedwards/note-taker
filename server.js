@@ -68,7 +68,6 @@ app.delete('/api/notes/:id', (req, res) => {
     console.info(`${req.method} request received to delete a note.`);
     
     const id = req.params.id;
-    
     if (id) {
 
         storedNotes = storedNotes.filter(item => item.id !== id);
