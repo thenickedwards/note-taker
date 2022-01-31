@@ -20,4 +20,6 @@ URL for app deployed on Heroku: https://thenickedwards-note-taker.herokuapp.com/
 
 Thank you for reading the readme!
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://thenickedwards-note-taker.herokuapp.com/)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
