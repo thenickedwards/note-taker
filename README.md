@@ -20,7 +20,7 @@ URL for app deployed on Heroku: https://thenickedwards-note-taker.herokuapp.com/
 
 Thank you for reading the readme!
 
-![Netlify Deployment Badges](/v3/img/blog/export for blog@2x.png)
+
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://thenickedwards-note-taker.herokuapp.com/)
 
