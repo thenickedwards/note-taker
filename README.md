@@ -1,3 +1,5 @@
+_NOTE: The deployment of this project is currently down. I am currently in the process of researching deployment options and appreciate your patience in the meantime! I will continue to keep this code available, so feel free to have a look around and reach out if you have questions or would like to chat further._
+
 # note-taker
 Homework 11 Express.js: Note Taker
 
